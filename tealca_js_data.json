@@ -1,0 +1,852 @@
+{
+  "Anzoátegui": [
+    {
+      "code": "2912",
+      "name": "Anaco",
+      "city": "Anaco",
+      "label": "2912 - Anaco"
+    },
+    {
+      "code": "2907",
+      "name": "Barcelona",
+      "city": "Barcelona",
+      "label": "2907 - Barcelona"
+    },
+    {
+      "code": "2901",
+      "name": "El Tigre",
+      "city": "El Tigre",
+      "label": "2901 - El Tigre"
+    },
+    {
+      "code": "2906",
+      "name": "Lechería",
+      "city": "Lechería",
+      "label": "2906 - Lechería"
+    },
+    {
+      "code": "2909",
+      "name": "Puerto La Cruz",
+      "city": "Puerto La Cruz",
+      "label": "2909 - Puerto La Cruz"
+    },
+    {
+      "code": "2913",
+      "name": "Puerto La Cruz Oeste",
+      "city": "Puerto La Cruz",
+      "label": "2913 - Puerto La Cruz Oeste"
+    }
+  ],
+  "Apure": [
+    {
+      "code": "5601",
+      "name": "Guasdualito",
+      "city": "",
+      "label": "5601 - Guasdualito"
+    },
+    {
+      "code": "5602",
+      "name": "San Fernando De Apure",
+      "city": "",
+      "label": "5602 - San Fernando De Apure"
+    }
+  ],
+  "Aragua": [
+    {
+      "code": "5119B",
+      "name": "El Limon",
+      "city": "",
+      "label": "5119B - El Limon"
+    },
+    {
+      "code": "5115",
+      "name": "Cagua",
+      "city": "Cagua",
+      "label": "5115 - Cagua"
+    },
+    {
+      "code": "5118",
+      "name": "La Victoria",
+      "city": "La Victoria",
+      "label": "5118 - La Victoria"
+    },
+    {
+      "code": "5122",
+      "name": "Las Delicias",
+      "city": "Maracay",
+      "label": "5122 - Las Delicias (Maracay)"
+    },
+    {
+      "code": "5113",
+      "name": "Maracay Este (av. Sucre)",
+      "city": "Maracay",
+      "label": "5113 - Maracay Este (av. Sucre)"
+    },
+    {
+      "code": "5119",
+      "name": "Maracay Oeste",
+      "city": "Maracay",
+      "label": "5119 - Maracay Oeste"
+    },
+    {
+      "code": "CC",
+      "name": "Oficina Comercial Maracay",
+      "city": "Maracay",
+      "label": "CC - Oficina Comercial Maracay"
+    },
+    {
+      "code": "5113B",
+      "name": "Tealca Maracay Sector Santa Ana",
+      "city": "Maracay",
+      "label": "5113B - Tealca Maracay Sector Santa Ana"
+    },
+    {
+      "code": "5117",
+      "name": "La Morita",
+      "city": "Turmero",
+      "label": "5117 - La Morita (Turmero)"
+    },
+    {
+      "code": "5120",
+      "name": "Turmero",
+      "city": "Turmero",
+      "label": "5120 - Turmero"
+    }
+  ],
+  "Barinas": [
+    {
+      "code": "8006",
+      "name": "Alto Barinas",
+      "city": "",
+      "label": "8006 - Alto Barinas"
+    },
+    {
+      "code": "8006C",
+      "name": "Barinas Calle Cedeno",
+      "city": "",
+      "label": "8006C - Barinas Calle Cedeno"
+    },
+    {
+      "code": "8006B",
+      "name": "Barinas Centro Comercial Barinas",
+      "city": "",
+      "label": "8006B - Barinas Centro Comercial Barinas"
+    },
+    {
+      "code": "8008",
+      "name": "Santa Barbara De Barinas",
+      "city": "",
+      "label": "8008 - Santa Barbara De Barinas"
+    },
+    {
+      "code": "8007",
+      "name": "Barinitas",
+      "city": "Barinitas",
+      "label": "8007 - Barinitas"
+    }
+  ],
+  "Bolívar": [
+    {
+      "code": "3211",
+      "name": "Santa Elena De Uairen",
+      "city": "",
+      "label": "3211 - Santa Elena De Uairen"
+    },
+    {
+      "code": "3104",
+      "name": "Tumeremo",
+      "city": "",
+      "label": "3104 - Tumeremo"
+    },
+    {
+      "code": "3210",
+      "name": "Ciudad Bolivar",
+      "city": "Ciudad Bolívar",
+      "label": "3210 - Ciudad Bolivar (Ciudad Bolívar)"
+    },
+    {
+      "code": "3205B",
+      "name": "Puerto Ordaz Alta Vista",
+      "city": "Puerto Ordaz",
+      "label": "3205B - Puerto Ordaz Alta Vista"
+    },
+    {
+      "code": "3205",
+      "name": "Puerto Ordaz Castillito",
+      "city": "Puerto Ordaz",
+      "label": "3205 - Puerto Ordaz Castillito"
+    },
+    {
+      "code": "3209",
+      "name": "Ventuari",
+      "city": "Puerto Ordaz",
+      "label": "3209 - Ventuari (Puerto Ordaz)"
+    },
+    {
+      "code": "3208",
+      "name": "San Félix (el Roble)",
+      "city": "San Félix",
+      "label": "3208 - San Félix (el Roble)"
+    },
+    {
+      "code": "3207",
+      "name": "Unare",
+      "city": "Unare",
+      "label": "3207 - Unare"
+    },
+    {
+      "code": "3208B",
+      "name": "Upata",
+      "city": "Upata",
+      "label": "3208B - Upata"
+    }
+  ],
+  "Carabobo": [
+    {
+      "code": "5214",
+      "name": "Guacara",
+      "city": "Guacara",
+      "label": "5214 - Guacara"
+    },
+    {
+      "code": "5209",
+      "name": "Naguanagua",
+      "city": "Valencia",
+      "label": "5209 - Naguanagua (Valencia)"
+    },
+    {
+      "code": "DD",
+      "name": "Oficina Comercial Valencia",
+      "city": "Valencia",
+      "label": "DD - Oficina Comercial Valencia"
+    },
+    {
+      "code": "5210",
+      "name": "San Diego",
+      "city": "Valencia",
+      "label": "5210 - San Diego (Valencia)"
+    },
+    {
+      "code": "5211",
+      "name": "Tocuyito",
+      "city": "Valencia",
+      "label": "5211 - Tocuyito (Valencia)"
+    },
+    {
+      "code": "5201",
+      "name": "Valencia (av. Andrés Eloy Blanco)",
+      "city": "Valencia",
+      "label": "5201 - Valencia (av. Andrés Eloy Blanco)"
+    },
+    {
+      "code": "5207",
+      "name": "Valencia (distribuidor San Blas)",
+      "city": "Valencia",
+      "label": "5207 - Valencia (distribuidor San Blas)"
+    },
+    {
+      "code": "5207B",
+      "name": "Valencia (plaza La Candelaria)",
+      "city": "Valencia",
+      "label": "5207B - Valencia (plaza La Candelaria)"
+    },
+    {
+      "code": "5208",
+      "name": "Valencia (zona Industrial Norte)",
+      "city": "Valencia",
+      "label": "5208 - Valencia (zona Industrial Norte)"
+    },
+    {
+      "code": "5206",
+      "name": "Valencia Sur (paseo Las Industrias)",
+      "city": "Valencia",
+      "label": "5206 - Valencia Sur (paseo Las Industrias)"
+    }
+  ],
+  "Cojedes": [
+    {
+      "code": "5402",
+      "name": "San Carlos",
+      "city": "San Carlos",
+      "label": "5402 - San Carlos"
+    },
+    {
+      "code": "5403",
+      "name": "Tinaquillo",
+      "city": "Tinaquillo",
+      "label": "5403 - Tinaquillo"
+    }
+  ],
+  "Caracas / Distrito Capital": [
+    {
+      "code": "1114",
+      "name": "Boleíta",
+      "city": "",
+      "label": "1114 - Boleíta"
+    },
+    {
+      "code": "1143",
+      "name": "Capitolio",
+      "city": "",
+      "label": "1143 - Capitolio"
+    },
+    {
+      "code": "1125",
+      "name": "Catia",
+      "city": "",
+      "label": "1125 - Catia"
+    },
+    {
+      "code": "1137B",
+      "name": "Ccct",
+      "city": "",
+      "label": "1137B - Ccct"
+    },
+    {
+      "code": "1142",
+      "name": "El Cafetal",
+      "city": "",
+      "label": "1142 - El Cafetal"
+    },
+    {
+      "code": "1128B",
+      "name": "El Cementerio",
+      "city": "",
+      "label": "1128B - El Cementerio"
+    },
+    {
+      "code": "1126",
+      "name": "El Paraíso",
+      "city": "",
+      "label": "1126 - El Paraíso"
+    },
+    {
+      "code": "1137",
+      "name": "El Rosal – Chacao",
+      "city": "",
+      "label": "1137 - El Rosal – Chacao"
+    },
+    {
+      "code": "1132",
+      "name": "Filas De Mariches",
+      "city": "",
+      "label": "1132 - Filas De Mariches"
+    },
+    {
+      "code": "1114C",
+      "name": "La California",
+      "city": "",
+      "label": "1114C - La California"
+    },
+    {
+      "code": "1128",
+      "name": "La Candelaria",
+      "city": "",
+      "label": "1128 - La Candelaria"
+    },
+    {
+      "code": "1128C",
+      "name": "La Candelaria C.c. Lord Center",
+      "city": "",
+      "label": "1128C - La Candelaria C.c. Lord Center"
+    },
+    {
+      "code": "1110",
+      "name": "La Trinidad",
+      "city": "",
+      "label": "1110 - La Trinidad"
+    },
+    {
+      "code": "1131",
+      "name": "Los Caobos",
+      "city": "",
+      "label": "1131 - Los Caobos"
+    },
+    {
+      "code": "AA",
+      "name": "Los Chaguaramos",
+      "city": "",
+      "label": "AA - Los Chaguaramos"
+    },
+    {
+      "code": "1127",
+      "name": "Los Palos Grandes",
+      "city": "",
+      "label": "1127 - Los Palos Grandes"
+    },
+    {
+      "code": "1114B",
+      "name": "Montecristo",
+      "city": "",
+      "label": "1114B - Montecristo"
+    },
+    {
+      "code": "1133",
+      "name": "Prados Del Este",
+      "city": "",
+      "label": "1133 - Prados Del Este"
+    },
+    {
+      "code": "EXPNN",
+      "name": "Quinta Crespo Internacional",
+      "city": "",
+      "label": "EXPNN - Quinta Crespo Internacional"
+    },
+    {
+      "code": "1102",
+      "name": "Sabana Grande",
+      "city": "",
+      "label": "1102 - Sabana Grande"
+    },
+    {
+      "code": "1119",
+      "name": "San Martin",
+      "city": "",
+      "label": "1119 - San Martin"
+    },
+    {
+      "code": "1102B",
+      "name": "Urbina",
+      "city": "",
+      "label": "1102B - Urbina"
+    },
+    {
+      "code": "1141",
+      "name": "Junquito",
+      "city": "El Junquito",
+      "label": "1141 - Junquito (El Junquito)"
+    }
+  ],
+  "Delta Amacuro": [
+    {
+      "code": "3300",
+      "name": "Tucupita",
+      "city": "Tucupita",
+      "label": "3300 - Tucupita"
+    }
+  ],
+  "Falcón": [
+    {
+      "code": "7609",
+      "name": "Dabajuro",
+      "city": "",
+      "label": "7609 - Dabajuro"
+    },
+    {
+      "code": "7607",
+      "name": "Coro",
+      "city": "Coro",
+      "label": "7607 - Coro"
+    },
+    {
+      "code": "7608",
+      "name": "Punto Fijo Las Virtudes Ciudad Comercial",
+      "city": "Punta Cardon",
+      "label": "7608 - Punto Fijo Las Virtudes Ciudad Comercial (Punta Cardon)"
+    },
+    {
+      "code": "7607B",
+      "name": "Punto Fijo Centro",
+      "city": "Punto Fijo",
+      "label": "7607B - Punto Fijo Centro"
+    }
+  ],
+  "Guárico": [
+    {
+      "code": "J5121",
+      "name": "San Juan De Los Morros – Villa De Cura",
+      "city": "",
+      "label": "J5121 - San Juan De Los Morros – Villa De Cura"
+    },
+    {
+      "code": "5501",
+      "name": "Calabozo",
+      "city": "Calabozo",
+      "label": "5501 - Calabozo"
+    },
+    {
+      "code": "5303",
+      "name": "Valle De La Pascua",
+      "city": "Valle de La Pascua",
+      "label": "5303 - Valle De La Pascua"
+    }
+  ],
+  "Lara": [
+    {
+      "code": "7918C",
+      "name": "Barquisimeto Carrera 19",
+      "city": "Barquisimeto",
+      "label": "7918C - Barquisimeto Carrera 19"
+    },
+    {
+      "code": "7910",
+      "name": "Barquisimeto Este",
+      "city": "Barquisimeto",
+      "label": "7910 - Barquisimeto Este"
+    },
+    {
+      "code": "7918",
+      "name": "Barquisimeto Oeste",
+      "city": "Barquisimeto",
+      "label": "7918 - Barquisimeto Oeste"
+    },
+    {
+      "code": "7918B",
+      "name": "Barquisimeto Oeste Av. Las Industrias",
+      "city": "Barquisimeto",
+      "label": "7918B - Barquisimeto Oeste Av. Las Industrias"
+    },
+    {
+      "code": "7912",
+      "name": "Barquisimeto Sur",
+      "city": "Barquisimeto",
+      "label": "7912 - Barquisimeto Sur"
+    },
+    {
+      "code": "GG",
+      "name": "Oficina Comercial Barquisimeto",
+      "city": "Barquisimeto",
+      "label": "GG - Oficina Comercial Barquisimeto"
+    },
+    {
+      "code": "7915",
+      "name": "Cabudare",
+      "city": "Cabudare",
+      "label": "7915 - Cabudare"
+    },
+    {
+      "code": "7916",
+      "name": "Carora",
+      "city": "Carora",
+      "label": "7916 - Carora"
+    }
+  ],
+  "Miranda": [
+    {
+      "code": "1406",
+      "name": "Carrizal",
+      "city": "",
+      "label": "1406 - Carrizal"
+    },
+    {
+      "code": "1501",
+      "name": "Charallave",
+      "city": "Charallave",
+      "label": "1501 - Charallave"
+    },
+    {
+      "code": "1305",
+      "name": "Guarenas",
+      "city": "Guarenas",
+      "label": "1305 - Guarenas"
+    },
+    {
+      "code": "1302",
+      "name": "Guatire",
+      "city": "Guatire",
+      "label": "1302 - Guatire"
+    },
+    {
+      "code": "1503",
+      "name": "Higuerote",
+      "city": "Higuerote",
+      "label": "1503 - Higuerote"
+    },
+    {
+      "code": "1405B",
+      "name": "Los Teques",
+      "city": "Los Teques",
+      "label": "1405B - Los Teques"
+    },
+    {
+      "code": "1405",
+      "name": "San Antonio De Los Altos",
+      "city": "San Antonio de los A",
+      "label": "1405 - San Antonio De Los Altos"
+    }
+  ],
+  "Monagas": [
+    {
+      "code": "3005",
+      "name": "Maturín Este (c.c. Juanico)",
+      "city": "Maturín",
+      "label": "3005 - Maturín Este (c.c. Juanico)"
+    },
+    {
+      "code": "RR",
+      "name": "Oficina Comercial Maturín",
+      "city": "Maturín",
+      "label": "RR - Oficina Comercial Maturín"
+    },
+    {
+      "code": "3007",
+      "name": "Tipuro",
+      "city": "Maturín",
+      "label": "3007 - Tipuro (Maturín)"
+    }
+  ],
+  "Mérida": [
+    {
+      "code": "8301B",
+      "name": "Merida",
+      "city": "",
+      "label": "8301B - Merida"
+    },
+    {
+      "code": "8308",
+      "name": "Merida Norte",
+      "city": "",
+      "label": "8308 - Merida Norte"
+    },
+    {
+      "code": "8204C",
+      "name": "Caja Seca",
+      "city": "Caja Seca",
+      "label": "8204C - Caja Seca"
+    },
+    {
+      "code": "8307",
+      "name": "El Vigía",
+      "city": "El Vigía",
+      "label": "8307 - El Vigía"
+    }
+  ],
+  "Nueva Esparta": [
+    {
+      "code": "2706C",
+      "name": "Cocheima",
+      "city": "La Asuncion",
+      "label": "2706C - Cocheima (La Asuncion)"
+    },
+    {
+      "code": "2706",
+      "name": "Porlamar",
+      "city": "Los Robles",
+      "label": "2706 - Porlamar (Los Robles)"
+    }
+  ],
+  "Portuguesa": [
+    {
+      "code": "5401B",
+      "name": "Acarigua",
+      "city": "Acarigua",
+      "label": "5401B - Acarigua"
+    },
+    {
+      "code": "5401C",
+      "name": "Acarigua Ii Mamanico",
+      "city": "Acarigua",
+      "label": "5401C - Acarigua Ii Mamanico"
+    },
+    {
+      "code": "7705",
+      "name": "Guanare",
+      "city": "Guanare",
+      "label": "7705 - Guanare"
+    }
+  ],
+  "Sucre": [
+    {
+      "code": "2803",
+      "name": "Carupano",
+      "city": "Carupano",
+      "label": "2803 - Carupano"
+    },
+    {
+      "code": "2804",
+      "name": "Cumana Santa Rosa",
+      "city": "Cumana",
+      "label": "2804 - Cumana Santa Rosa"
+    },
+    {
+      "code": "2802",
+      "name": "Cumaná",
+      "city": "Cumana",
+      "label": "2802 - Cumaná (Cumana)"
+    }
+  ],
+  "Trujillo": [
+    {
+      "code": "8204",
+      "name": "Valera",
+      "city": "Valera",
+      "label": "8204 - Valera"
+    },
+    {
+      "code": "8204B",
+      "name": "Valera-Centro",
+      "city": "Valera",
+      "label": "8204B - Valera-Centro"
+    }
+  ],
+  "Táchira": [
+    {
+      "code": "8517",
+      "name": "Rubio",
+      "city": "",
+      "label": "8517 - Rubio"
+    },
+    {
+      "code": "8115C",
+      "name": "Capacho",
+      "city": "Capacho",
+      "label": "8115C - Capacho"
+    },
+    {
+      "code": "8113",
+      "name": "La Fria",
+      "city": "La fria",
+      "label": "8113 - La Fria"
+    },
+    {
+      "code": "8112B",
+      "name": "San Antonio Del Tachira",
+      "city": "San Antonio del Tach",
+      "label": "8112B - San Antonio Del Tachira"
+    },
+    {
+      "code": "8112",
+      "name": "Paramillo",
+      "city": "San Cristobal",
+      "label": "8112 - Paramillo (San Cristobal)"
+    },
+    {
+      "code": "8115",
+      "name": "San Cristobal",
+      "city": "San Cristobal",
+      "label": "8115 - San Cristobal"
+    },
+    {
+      "code": "8111",
+      "name": "San Cristóbal (barrio Obrero)",
+      "city": "San Cristobal",
+      "label": "8111 - San Cristóbal (barrio Obrero) (San Cristobal)"
+    },
+    {
+      "code": "8114",
+      "name": "San Cristóbal Sur",
+      "city": "San Cristobal",
+      "label": "8114 - San Cristóbal Sur (San Cristobal)"
+    },
+    {
+      "code": "8115B",
+      "name": "Tariba",
+      "city": "Tariba",
+      "label": "8115B - Tariba"
+    },
+    {
+      "code": "8107",
+      "name": "Ureña",
+      "city": "Ureña",
+      "label": "8107 - Ureña"
+    }
+  ],
+  "La Guaira": [
+    {
+      "code": "1234",
+      "name": "Maiquetia",
+      "city": "Maiquetia",
+      "label": "1234 - Maiquetia"
+    }
+  ],
+  "Yaracuy": [
+    {
+      "code": "7802",
+      "name": "San Felipe",
+      "city": "San Felipe",
+      "label": "7802 - San Felipe"
+    }
+  ],
+  "Zulia": [
+    {
+      "code": "8307B",
+      "name": "Santa Barbara Del Zulia",
+      "city": "",
+      "label": "8307B - Santa Barbara Del Zulia"
+    },
+    {
+      "code": "8405",
+      "name": "Cabimas",
+      "city": "Cabimas",
+      "label": "8405 - Cabimas"
+    },
+    {
+      "code": "8406",
+      "name": "Ciudad Ojeda",
+      "city": "Ciudad Ojeda",
+      "label": "8406 - Ciudad Ojeda"
+    },
+    {
+      "code": "8502",
+      "name": "Bella Vista 5 De Julio",
+      "city": "Maracaibo",
+      "label": "8502 - Bella Vista 5 De Julio (Maracaibo)"
+    },
+    {
+      "code": "8502B",
+      "name": "Delicias 5 De Julio",
+      "city": "Maracaibo",
+      "label": "8502B - Delicias 5 De Julio (Maracaibo)"
+    },
+    {
+      "code": "8511",
+      "name": "Dr. Portillo",
+      "city": "Maracaibo",
+      "label": "8511 - Dr. Portillo (Maracaibo)"
+    },
+    {
+      "code": "8511B",
+      "name": "Maracaibo Centro Cc Gran Bazar",
+      "city": "Maracaibo",
+      "label": "8511B - Maracaibo Centro Cc Gran Bazar"
+    },
+    {
+      "code": "8513B",
+      "name": "Maracaibo Circunvalacion 2 Sur Oeste",
+      "city": "Maracaibo",
+      "label": "8513B - Maracaibo Circunvalacion 2 Sur Oeste"
+    },
+    {
+      "code": "8513C",
+      "name": "Maracaibo Delicias Norte Centro Comercial El Pilar",
+      "city": "Maracaibo",
+      "label": "8513C - Maracaibo Delicias Norte Centro Comercial El Pilar"
+    },
+    {
+      "code": "8514",
+      "name": "Maracaibo Norte",
+      "city": "Maracaibo",
+      "label": "8514 - Maracaibo Norte"
+    },
+    {
+      "code": "8513",
+      "name": "Maracaibo Oeste – La Limpia",
+      "city": "Maracaibo",
+      "label": "8513 - Maracaibo Oeste – La Limpia"
+    },
+    {
+      "code": "8509B",
+      "name": "Maracaibo Sur (la Coromoto)",
+      "city": "Maracaibo",
+      "label": "8509B - Maracaibo Sur (la Coromoto)"
+    },
+    {
+      "code": "8509",
+      "name": "Maracaibo Sur (san Francisco)",
+      "city": "Maracaibo",
+      "label": "8509 - Maracaibo Sur (san Francisco)"
+    },
+    {
+      "code": "BB",
+      "name": "Oficina Comercial Maracaibo – Cecilio Acosta",
+      "city": "Maracaibo",
+      "label": "BB - Oficina Comercial Maracaibo – Cecilio Acosta"
+    },
+    {
+      "code": "8516",
+      "name": "Villa Del Rosario",
+      "city": "Villa del Rosario",
+      "label": "8516 - Villa Del Rosario"
+    }
+  ]
+}

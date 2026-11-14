@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>SNAIL 92™ | El Secreto Coreano para una Piel de Porcelana sin Grasa</title>
+  <meta name="description" content="Tratamiento coreano en gel concentrado al 92% de filtrado bio-activo Helix. Alisa textura, minimiza poros y repara tu barrera cutánea sin sensación grasosa. Paga al recibir en toda Venezuela.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter (Tipografía Apple Standard) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            appleBg: '#fafafa',
+            appleDark: '#09090b',
+            appleMuted: '#71717a',
+            brandYellow: '#FACC15',
+            brandYellowDark: '#EAB308',
+            brandYellowLight: '#FEF08A',
+            brandBlack: '#000000',
+          },
+          fontFamily: {
+            sans: ['"Inter"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #fafafa;
+      color: #09090b;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+      letter-spacing: -0.02em;
+    }
+
+    /* Botón Vibrante Amarillo con Glass Shine */
+    .glass-btn-yellow {
+      background: linear-gradient(135deg, #FDE047 0%, #EAB308 100%);
+      color: #000000;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      box-shadow: 0 10px 26px -4px rgba(234, 179, 8, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.8);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-btn-yellow:hover {
+      transform: translateY(-1.5px);
+      box-shadow: 0 14px 32px -4px rgba(234, 179, 8, 0.6);
+    }
+    .glass-btn-yellow:active {
+      transform: translateY(0.5px);
+    }
+
+    /* Navbar Glassmorphism */
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Animación de entrada para el modal pop-up */
+    @keyframes modalSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px) scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+    .animate-modal {
+      animation: modalSlideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+  </style>
+</head>
+<body class="bg-appleBg text-appleDark antialiased pb-28">
+
+  <!-- 1. CINTILLO SUPERIOR -->
+  <div class="bg-brandBlack text-white py-2 px-3 text-center text-[11px] sm:text-xs shadow-inner">
+    <div class="max-w-md mx-auto flex items-center justify-center gap-2 flex-wrap">
+      <span class="text-xs">📞</span>
+      <span class="font-bold text-white tracking-wide">Te llamaremos para confirmar, <span class="font-extrabold text-brandYellow underline decoration-brandYellow">pagas al recibir</span></span>
+    </div>
+  </div>
+
+  <!-- 2. HEADER APPLE-STYLE (LIMPIO, PAREJO Y PERFECTAMENTE ALINEADO) -->
+  <header class="sticky top-0 z-40 glass-nav py-2.5 px-4">
+    <div class="max-w-md mx-auto flex items-center justify-between">
+      
+      <!-- LOGO Y BRAND ESTRUCTURADO Y PAREJO -->
+      <div class="flex items-center gap-2">
+        <span class="font-black text-sm tracking-tight text-black flex items-center gap-1">
+          SNAIL 92<span class="text-brandYellow text-base leading-none">™</span>
+        </span>
+        <span class="inline-block bg-neutral-100 text-neutral-600 text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border border-neutral-200/60">
+          K-Formula
+        </span>
+      </div>
+      
+      <!-- BOTÓN ARRIBA DE ORDENAR (PROPORCIONADO) -->
+      <button onclick="openModal()" class="glass-btn-yellow text-xs font-black px-4 py-1.5 rounded-full flex items-center gap-1.5 shadow-sm">
+        <span>ORDENAR</span>
+        <span class="text-xs">🛍️</span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- 3. HERO SECTION (FOTO EDITORIAL DE LA MODELO RESPETANDO ROSTRO Y POTE) -->
+  <section class="pt-5 pb-7 px-4 max-w-md mx-auto">
+    
+    <div class="relative rounded-3xl overflow-hidden bg-neutral-900 border border-neutral-200/80 shadow-lg">
+      
+      <!-- FOTO EDITORIAL DE LA MODELO -->
+      <div class="relative w-full overflow-hidden">
+        <img src="images/modelo_hero.jpg" alt="Secreto Coreano Snail 92" class="w-full h-auto object-cover block select-none">
+        
+        <!-- Degradado suave en la parte superior para los titulares (sin tapar ojos ni aplicación) -->
+        <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/80 via-black/35 to-transparent pointer-events-none"></div>
+        
+        <!-- Degradado suave en la base inferior -->
+        <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/85 via-black/40 to-transparent pointer-events-none"></div>
+
+        <!-- TITULAR EN ZONA SUPERIOR LIMPIA -->
+        <div class="absolute top-4 inset-x-4 text-center">
+          <div class="inline-flex items-center gap-1.5 bg-black/60 backdrop-blur-md border border-white/20 text-white text-[10px] font-bold px-3 py-1 rounded-full mb-1.5 tracking-wider uppercase shadow-sm">
+            <span class="text-brandYellow">✦</span>
+            <span>Innovación Cosmética Coreana</span>
+          </div>
+          <h1 class="text-2xl sm:text-3xl font-black text-white tracking-tight leading-tight drop-shadow-md">
+            Piel de Porcelana.<br>
+            <span class="text-brandYellow">Cero Grasa.</span>
+          </h1>
+        </div>
+
+        <!-- TAGS FLOTANTES INFERIORES AL LADO DEL POTE -->
+        <div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-white text-[10px] font-bold drop-shadow">
+          <span class="bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20">
+            🌿 Bio-Filtrado Helix 92%
+          </span>
+          <span class="bg-brandYellow text-black px-2.5 py-1 rounded-full font-black">
+            10s Absorción
+          </span>
+        </div>
+      </div>
+
+      <!-- BLOQUE DE TEXTO Y BOTÓN DEBAJO DE LA FOTO -->
+      <div class="p-5 bg-white text-center">
+        <p class="text-neutral-600 text-xs sm:text-sm leading-relaxed mb-4 font-normal">
+          El secreto coreano de alta gama: un <strong>bio-filtrado dérmico puro</strong> que alisa la textura áspera y cierra poros sin dejar sensación grasosa en el clima de Venezuela.
+        </p>
+
+        <!-- BOTÓN HERO QUE ABRE EL POP-UP -->
+        <button onclick="openModal()" class="glass-btn-yellow text-black font-black text-sm py-3.5 px-6 rounded-2xl w-full flex items-center justify-center gap-2 shadow-md">
+          <span>PEDIR CONTRA ENTREGA</span>
+          <span>—</span>
+          <span>$26.99</span>
+        </button>
+        <p class="text-[10px] text-neutral-400 mt-2 font-medium">🚚 Envío Gratis a Toda Venezuela · Pagas al recibir en tus manos</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- 4. DESCRIPCIÓN DEL PRODUCTO (EL SECRETO COREANO Y LA CIENCIA DEL BIO-FILTRADO) -->
+  <section class="py-9 px-6 bg-white border-y border-neutral-100">
+    <div class="max-w-md mx-auto">
+      
+      <div class="flex items-center gap-2 mb-2">
+        <span class="text-brandYellowDark font-bold text-xs">✦</span>
+        <span class="text-[10px] font-black uppercase tracking-widest text-neutral-400">
+          Ciencia Dermatológica
+        </span>
+      </div>
+
+      <h2 class="text-2xl font-black text-black tracking-tight mb-3">
+        Por qué las mujeres coreanas cambiaron las cremas pesadas por el Bio-Filtrado Helix.
+      </h2>
+      
+      <p class="text-neutral-600 text-xs sm:text-sm leading-relaxed mb-3.5 font-normal">
+        En Seúl, la tendencia abandonó las cremas untuosas con aceites densos. Con el calor y la humedad de Venezuela, esas fórmulas convencionales <strong>asfixian los poros, provocando brillos grasosos y brotes</strong>.
+      </p>
+
+      <p class="text-neutral-900 text-xs sm:text-sm leading-relaxed mb-5 font-semibold">
+        <strong>Snail 92</strong> utiliza el activo más puro de la dermatología: <em>Helix Secretion Filtrate</em> concentrado al 92%. Un hidrogel biológico activo con <strong>Ácido Hialurónico microfiltrado y Alantoína pura</strong> que alisa el microrrelieve de la piel y se absorbe en solo 10 segundos.
+      </p>
+
+      <!-- 3 STATS APPLE STYLE -->
+      <div class="grid grid-cols-3 gap-2.5 pt-3 border-t border-neutral-100 text-center">
+        <div class="p-3 bg-neutral-50 rounded-2xl border border-neutral-100">
+          <span class="block text-xl font-black text-black">92%</span>
+          <span class="text-[10px] text-neutral-500 font-medium">Bio-Filtrado</span>
+        </div>
+        <div class="p-3 bg-neutral-50 rounded-2xl border border-neutral-100">
+          <span class="block text-xl font-black text-black">10s</span>
+          <span class="text-[10px] text-neutral-500 font-medium">Absorción</span>
+        </div>
+        <div class="p-3 bg-neutral-50 rounded-2xl border border-neutral-100">
+          <span class="block text-xl font-black text-black">0%</span>
+          <span class="text-[10px] text-neutral-500 font-medium">Sensación Grasa</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. CARRUSEL TÁCTIL (SWIPE CON DEDO CON TODAS LAS FOTOS REALES) -->
+  <section class="py-9 px-6 max-w-md mx-auto">
+    
+    <div class="flex items-center justify-between mb-3">
+      <div>
+        <span class="text-[10px] font-black uppercase tracking-widest text-neutral-400 block">Galería Oficial</span>
+        <h3 class="text-lg font-black text-black">Detalles de la Fórmula</h3>
+      </div>
+      <span class="text-[11px] text-neutral-400 font-medium">Desliza ↔</span>
+    </div>
+
+    <!-- CONTENEDOR TÁCTIL PRINCIPAL -->
+    <div id="carousel-touch-area" class="relative bg-white rounded-3xl overflow-hidden flex items-center justify-center border border-neutral-200/80 h-80 shadow-sm select-none">
+      <img id="main-product-img" src="images/hero_jar.jpg" alt="Foto Producto Snail 92" class="max-h-full max-w-full object-contain p-3 transition-all duration-300">
+      
+      <!-- Flechas Glassmorphism -->
+      <button onclick="prevSlide()" class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 backdrop-blur-md shadow-md text-black font-bold flex items-center justify-center text-base border border-neutral-200 z-10 transition-transform active:scale-90">
+        ‹
+      </button>
+      <button onclick="nextSlide()" class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 backdrop-blur-md shadow-md text-black font-bold flex items-center justify-center text-base border border-neutral-200 z-10 transition-transform active:scale-90">
+        ›
+      </button>
+
+      <span class="absolute bottom-3 right-3 bg-black/80 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full backdrop-blur-md" id="slide-indicator">1 / 4</span>
+    </div>
+
+    <!-- MINIATURAS DEL CARRUSEL -->
+    <div class="grid grid-cols-4 gap-2 mt-3" id="thumbnail-container">
+      <img onclick="setSlide(0)" src="images/hero_jar.jpg" class="thumb-img w-full h-16 rounded-xl object-contain cursor-pointer border-2 border-black bg-white p-1 transition-all">
+      <img onclick="setSlide(1)" src="images/manos_abriendo_pote.jpg" class="thumb-img w-full h-16 rounded-xl object-cover cursor-pointer border border-neutral-200 bg-white p-1 opacity-50 transition-all">
+      <img onclick="setSlide(2)" src="images/antes_despues_textura.jpg" class="thumb-img w-full h-16 rounded-xl object-cover cursor-pointer border border-neutral-200 bg-white p-1 opacity-50 transition-all">
+      <img onclick="setSlide(3)" src="images/caja_dimensiones.jpg" class="thumb-img w-full h-16 rounded-xl object-contain cursor-pointer border border-neutral-200 bg-white p-1 opacity-50 transition-all">
+    </div>
+
+  </section>
+
+  <!-- 6. MODO DE USO (CORREGIDO: "APLICA UNA PEQUEÑA CANTIDAD") -->
+  <section class="py-9 px-6 bg-white border-y border-neutral-100">
+    <div class="max-w-md mx-auto">
+      
+      <span class="text-[10px] font-black uppercase tracking-widest text-neutral-400 block mb-1">Ritual Diario</span>
+      <h3 class="text-xl font-black text-black tracking-tight mb-4">Modo de Uso en 3 Pasos</h3>
+
+      <div class="space-y-3">
+        
+        <div class="p-3.5 bg-neutral-50 rounded-2xl flex items-start gap-3.5 border border-neutral-100">
+          <div class="w-7 h-7 rounded-full bg-black text-brandYellow text-xs font-black flex items-center justify-center flex-shrink-0">
+            1
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-black mb-0.5">Limpia tu piel</h4>
+            <p class="text-neutral-500 text-[11px] leading-relaxed">Lava tu rostro con tu limpiador habitual y retira el exceso de humedad con toques suaves.</p>
+          </div>
+        </div>
+
+        <div class="p-3.5 bg-neutral-50 rounded-2xl flex items-start gap-3.5 border border-neutral-100">
+          <div class="w-7 h-7 rounded-full bg-black text-brandYellow text-xs font-black flex items-center justify-center flex-shrink-0">
+            2
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-black mb-0.5">Aplica una pequeña cantidad</h4>
+            <p class="text-neutral-500 text-[11px] leading-relaxed">Su consistencia bio-elástica rinde muchísimo. Una sola porción con la yema de tus dedos cubre rostro y cuello por completo.</p>
+          </div>
+        </div>
+
+        <div class="p-3.5 bg-neutral-50 rounded-2xl flex items-start gap-3.5 border border-neutral-100">
+          <div class="w-7 h-7 rounded-full bg-black text-brandYellow text-xs font-black flex items-center justify-center flex-shrink-0">
+            3
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-black mb-0.5">Toquecitos suaves (Dabbing)</h4>
+            <p class="text-neutral-500 text-[11px] leading-relaxed">Da suaves toquecitos con los dedos hasta que se absorba en 10 segundos. Úsala de día antes del protector solar y de noche.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7. BENEFICIOS (BENTO GRID APPLE-STYLE) -->
+  <section class="py-10 px-6 max-w-md mx-auto">
+    
+    <span class="text-[10px] font-black uppercase tracking-widest text-brandYellowDark block mb-1">Resultados Comprobados</span>
+    <h3 class="text-2xl font-black text-black tracking-tight mb-5">Beneficios Clave</h3>
+
+    <div class="space-y-3">
+      
+      <!-- BENTO CARD 1: HERO BENEFIT (AMARILLO Y NEGRO) -->
+      <div class="p-5 rounded-3xl bg-gradient-to-br from-brandYellow to-amber-500 text-black shadow-sm">
+        <span class="text-xl mb-1.5 block">✨</span>
+        <h4 class="text-base font-black mb-1">Alisa la Textura y Cierra Poros</h4>
+        <p class="text-neutral-900 text-xs leading-relaxed font-medium">
+          Rellena de forma natural el microrrelieve de la piel áspera o con relieve, dejando un acabado liso y uniforme tipo porcelana.
+        </p>
+      </div>
+
+      <!-- BENTO CARD 2: CERO GRASA EN CALOR -->
+      <div class="p-5 rounded-3xl bg-neutral-900 text-white shadow-sm">
+        <span class="text-xl mb-1.5 block">💧</span>
+        <h4 class="text-base font-black mb-1">Cero Grasa en Clima Tropical</h4>
+        <p class="text-neutral-400 text-xs leading-relaxed font-normal">
+          Fórmula no comedogénica en gel hidrofílico. No satura los poros ni produce brillo aceitoso bajo el sol y calor de Venezuela.
+        </p>
+      </div>
+
+      <!-- BENTO CARDS 3 & 4 (2 COLUMNAS) -->
+      <div class="grid grid-cols-2 gap-3">
+        <div class="p-4 rounded-3xl bg-white border border-neutral-200">
+          <span class="text-lg mb-1 block">🌿</span>
+          <h4 class="text-xs font-bold text-black mb-1">Repara Marcas Rojas</h4>
+          <p class="text-neutral-500 text-[11px] leading-tight">La alantoína regenera la dermis y desvanece marcas de brotes.</p>
+        </div>
+        <div class="p-4 rounded-3xl bg-white border border-neutral-200">
+          <span class="text-lg mb-1 block">💎</span>
+          <h4 class="text-xs font-bold text-black mb-1">Efecto Glass Skin</h4>
+          <p class="text-neutral-500 text-[11px] leading-tight">Luminosidad limpia y jugosa sin necesidad de usar maquillaje.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BOTÓN DEBAJO DE BENEFICIOS CLAVE (COMO PIDIÓ EL USUARIO) -->
+    <div class="mt-6 text-center">
+      <button onclick="openModal()" class="glass-btn-yellow w-full font-black text-sm py-4 px-6 rounded-2xl flex items-center justify-center gap-2 shadow-md">
+        <span>SOLICITAR TRATAMIENTO · PAGO AL RECIBIR</span>
+        <span class="text-base">🛍️</span>
+      </button>
+      <p class="text-[10px] text-neutral-400 mt-2 font-medium">🚚 Despacho Nacional por Valija Tealca · Stock Listo en Caracas</p>
+    </div>
+
+  </section>
+
+  <!-- 8. PREGUNTAS FRECUENTES (MINIMALIST ACCORDION) -->
+  <section class="py-8 px-6 max-w-md mx-auto">
+    <h3 class="text-base font-black text-black mb-3 text-center">Preguntas Frecuentes</h3>
+    
+    <div class="space-y-2 text-xs">
+      
+      <details class="bg-white border border-neutral-200/80 rounded-2xl p-3.5 group">
+        <summary class="font-bold text-black cursor-pointer list-none flex justify-between items-center">
+          <span>¿Es grasosa en el clima cálido de Venezuela?</span>
+          <span class="text-neutral-400 group-open:rotate-180 transition-transform text-xs">▼</span>
+        </summary>
+        <p class="text-neutral-600 mt-2 leading-relaxed">
+          No. Es un bio-filtrado acuoso de textura ultraligera que se absorbe en menos de 10 segundos. No tapa los poros ni deja brillo pegajoso a mediodía.
+        </p>
+      </details>
+
+      <details class="bg-white border border-neutral-200/80 rounded-2xl p-3.5 group">
+        <summary class="font-bold text-black cursor-pointer list-none flex justify-between items-center">
+          <span>¿Cuánto tarda en llegar a mi ciudad?</span>
+          <span class="text-neutral-400 group-open:rotate-180 transition-transform text-xs">▼</span>
+        </summary>
+        <p class="text-neutral-600 mt-2 leading-relaxed">
+          En Caracas entregamos el mismo día o al día siguiente con delivery express. Para el resto del país, despachamos vía valija nacional Tealca y llega en 24 a 48 horas hábiles directo a tu dirección o agencia receptora.
+        </p>
+      </details>
+
+      <details class="bg-white border border-neutral-200/80 rounded-2xl p-3.5 group">
+        <summary class="font-bold text-black cursor-pointer list-none flex justify-between items-center">
+          <span>¿Cómo se realiza el pago al recibir?</span>
+          <span class="text-neutral-400 group-open:rotate-180 transition-transform text-xs">▼</span>
+        </summary>
+        <p class="text-neutral-600 mt-2 leading-relaxed">
+          Pagas en efectivo en dólares exactos o realizas tu Pago Móvil en el instante a la Tasa Oficial del BCV del día directamente al momento de recibir tu paquete.
+        </p>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- 9. STICKY FOOTER BAR MINIMALISTA FROSTED GLASS -->
+  <div class="fixed bottom-0 left-0 right-0 glass-nav py-3 px-5 z-40 shadow-2xl">
+    <div class="max-w-md mx-auto flex items-center justify-between gap-3">
+      <div>
+        <span class="text-[9px] text-neutral-400 uppercase font-bold block tracking-wider" id="sticky-offer-name">COMBO DÚO (2x)</span>
+        <div class="flex items-baseline gap-1">
+          <span class="text-lg font-black text-black" id="sticky-price-usd">$42.00</span>
+          <span class="text-[10px] text-emerald-600 font-bold">Envío Gratis</span>
+        </div>
+      </div>
+      <button onclick="openModal()" class="glass-btn-yellow text-xs font-black px-5 py-2.5 rounded-full flex items-center gap-1.5 shadow-md flex-shrink-0">
+        <span>ORDENAR</span>
+        <span>📦</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- 10. MODAL POP-UP PARA COMPLETAR EL PEDIDO (COMO EN WART REMOVER) -->
+  <div id="checkout-modal" class="fixed inset-0 bg-neutral-950/70 backdrop-blur-md z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4">
+    
+    <div class="bg-white rounded-t-3xl sm:rounded-3xl max-w-md w-full max-h-[92vh] overflow-y-auto p-5 sm:p-6 shadow-2xl relative text-xs animate-modal">
+      
+      <!-- BOTÓN CERRAR -->
+      <button onclick="closeModal()" class="absolute right-4 top-4 w-8 h-8 rounded-full bg-neutral-100 text-neutral-600 font-bold flex items-center justify-center hover:bg-neutral-200 text-sm transition-colors">
+        ✕
+      </button>
+
+      <!-- ENCABEZADO DEL MODAL -->
+      <div class="mb-3 pr-7">
+        <span class="text-[10px] font-black text-emerald-600 uppercase tracking-wider block">ENVÍO 100% GRATIS · VALIJA TEALCA</span>
+        <h3 class="font-black text-xl text-black leading-tight">Completa tu Pedido Contra Entrega</h3>
+        <p class="text-[11px] text-neutral-500 mt-0.5">Llega en 24 a 48 horas. Pagas al tenerlo en tus manos.</p>
+      </div>
+
+      <!-- BANNER DE CONFIANZA DENTRO DEL MODAL -->
+      <div class="bg-amber-50 border border-amber-200 rounded-2xl p-3 mb-4 text-[11px] text-neutral-800 flex items-start gap-2.5">
+        <span class="text-base">🛡️</span>
+        <div>
+          <strong class="font-extrabold text-black block">¡Ahora no pagas nada!</strong>
+          <span class="text-neutral-600">Manuel te llamará por WhatsApp para confirmar tus datos antes de despachar.</span>
+        </div>
+      </div>
+
+      <!-- PASO 1: SELECTOR DE OFERTA CON BORDES DE ALTO CONTRASTE -->
+      <div class="mb-4">
+        <label class="block font-black text-black mb-2 uppercase text-[10px] tracking-wider">
+          Paso 1: Elige tu Tratamiento
+        </label>
+        
+        <div class="space-y-2.5">
+          
+          <!-- OFERTA 2: COMBO DÚO (DEFAULT SELECCIONADO: BORDE NEGRO GRUESO Y BG AMARILLO SUAVE) -->
+          <div id="card-offer-duo" onclick="selectOffer('duo', 42.00)" class="cursor-pointer p-3.5 rounded-2xl border-2 border-black bg-amber-50/40 shadow-sm transition-all flex items-center justify-between relative ring-2 ring-black/5">
+            <span class="absolute -top-2 right-4 bg-brandYellow text-black text-[9px] font-black uppercase px-2.5 py-0.5 rounded-full shadow-sm tracking-wider">
+              ★ MÁS ELEGIDO · AHORRA $11.98
+            </span>
+            <div class="flex items-center gap-2.5">
+              <input type="radio" name="modal_offer" id="modal-radio-duo" checked class="w-4 h-4 text-black focus:ring-black">
+              <div>
+                <strong class="font-black text-black block text-xs">COMBO DÚO (2 Potes - 200g)</strong>
+                <span class="text-[10px] text-neutral-500">Tratamiento completo 60+ días</span>
+              </div>
+            </div>
+            <div class="text-right flex-shrink-0 ml-2">
+              <span class="font-black text-black block text-sm leading-none">$42.00</span>
+              <span class="text-[10px] font-bold text-emerald-600 block mt-0.5">Envío Gratis</span>
+            </div>
+          </div>
+
+          <!-- OFERTA 1: TRATAMIENTO INDIVIDUAL -->
+          <div id="card-offer-single" onclick="selectOffer('single', 26.99)" class="cursor-pointer p-3.5 rounded-2xl border border-neutral-200 bg-white opacity-70 hover:opacity-100 transition-all flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <input type="radio" name="modal_offer" id="modal-radio-single" class="w-4 h-4 text-black focus:ring-black">
+              <div>
+                <strong class="font-bold text-neutral-800 block text-xs">1 Pote Individual (100g)</strong>
+                <span class="text-[10px] text-neutral-500">Para probar el producto</span>
+              </div>
+            </div>
+            <div class="text-right flex-shrink-0 ml-2">
+              <span class="font-black text-black block text-sm leading-none">$26.99</span>
+              <span class="text-[10px] font-bold text-emerald-600 block mt-0.5">Envío Gratis</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PASO 2: DATOS DEL CLIENTE Y ENVÍO -->
+      <form id="modal-order-form" onsubmit="handleOrderSubmit(event)" class="space-y-3">
+        
+        <div>
+          <label class="block font-bold text-neutral-800 mb-1">Nombre y Apellido *</label>
+          <input type="text" id="cust-name" required placeholder="Ej: Valentina Morales" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-200 focus:border-black focus:ring-1 focus:ring-black outline-none bg-neutral-50/60 focus:bg-white text-xs">
+        </div>
+
+        <div>
+          <label class="block font-bold text-neutral-800 mb-1">Número de WhatsApp *</label>
+          <input type="tel" id="cust-phone" required placeholder="Ej: 0412 1234567" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-200 focus:border-black focus:ring-1 focus:ring-black outline-none bg-neutral-50/60 focus:bg-white text-xs">
+          <span class="text-[10px] text-neutral-400 mt-0.5 block">Manuel te enviará la nota oficial de despacho por aquí.</span>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2.5">
+          <div>
+            <label class="block font-bold text-neutral-800 mb-1">Estado *</label>
+            <select id="cust-state" required class="w-full px-3 py-2.5 rounded-xl border border-neutral-200 focus:border-black focus:ring-1 focus:ring-black outline-none bg-white text-xs">
+              <option value="">Selecciona</option>
+              <option value="Caracas / Distrito Capital">Caracas / Distrito Capital</option>
+              <option value="Miranda">Miranda</option>
+              <option value="Zulia">Zulia</option>
+              <option value="Carabobo">Carabobo</option>
+              <option value="Aragua">Aragua</option>
+              <option value="Lara">Lara</option>
+              <option value="Anzoátegui">Anzoátegui</option>
+              <option value="Bolívar">Bolívar</option>
+              <option value="Nueva Esparta">Nueva Esparta</option>
+              <option value="Falcón">Falcón</option>
+              <option value="Táchira">Táchira</option>
+              <option value="Mérida">Mérida</option>
+              <option value="Monagas">Monagas</option>
+              <option value="Sucre">Sucre</option>
+              <option value="Portuguesa">Portuguesa</option>
+              <option value="Barinas">Barinas</option>
+              <option value="Guárico">Guárico</option>
+              <option value="Yaracuy">Yaracuy</option>
+              <option value="Trujillo">Trujillo</option>
+              <option value="Apure">Apure</option>
+              <option value="La Guaira">La Guaira</option>
+              <option value="Cojedes">Cojedes</option>
+              <option value="Amazonas">Amazonas</option>
+              <option value="Delta Amacuro">Delta Amacuro</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-bold text-neutral-800 mb-1">Ciudad / Municipio *</label>
+            <input type="text" id="cust-city" required placeholder="Ej: Chacao / Valencia" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-200 focus:border-black focus:ring-1 focus:ring-black outline-none bg-neutral-50/60 focus:bg-white text-xs">
+          </div>
+        </div>
+
+        <!-- CAMPO 1: DIRECCIÓN EXACTA (OBLIGATORIA) -->
+        <div>
+          <label class="block font-bold text-neutral-800 mb-1">Dirección Exacta de Entrega *</label>
+          <textarea id="cust-address" required rows="2" placeholder="Ej: Urb. Los Palos Grandes, Edif. Apolo, Apto 4-B o punto de referencia" class="w-full px-3.5 py-2.5 rounded-xl border border-neutral-200 focus:border-black focus:ring-1 focus:ring-black outline-none bg-neutral-50/60 focus:bg-white text-xs resize-none"></textarea>
+        </div>
+
+        <!-- CAMPO 2: AGENCIA TEALCA (DROPDOWN DINÁMICO 134 SUCURSALES) -->
+        <div>
+          <label class="block font-bold text-neutral-800 mb-0.5 flex items-center justify-between">
+            <span>Agencia Tealca más cercana <span class="text-neutral-400 font-normal">(Opcional)</span></span>
+            <span class="text-[10px] bg-amber-100 text-amber-900 font-semibold px-2 py-0.5 rounded-full">134 sedes activas</span>
+          </label>
+          <span class="text-[10px] text-neutral-400 block mb-1">Si prefieres retirar en taquilla oficial, selecciona tu sucursal:</span>
+          <select id="cust-tealca" class="w-full px-3 py-2.5 rounded-xl border border-neutral-200 focus:border-black focus:ring-1 focus:ring-black outline-none bg-white text-xs text-neutral-800">
+            <option value="">(Opcional) Selecciona tu sucursal Tealca</option>
+            <option value="Entrega a Domicilio">🏠 Prefiero entrega en mi dirección exacta (Sin taquilla)</option>
+          </select>
+        </div>
+
+        <!-- FORMA DE PAGO AL RECIBIR -->
+        <div>
+          <label class="block font-bold text-neutral-800 mb-1.5">¿Cómo prefieres pagar al recibir? *</label>
+          <div class="grid grid-cols-2 gap-2 text-xs">
+            <label class="flex items-center gap-2 p-2.5 border border-neutral-200 rounded-xl cursor-pointer bg-neutral-50">
+              <input type="radio" name="paymethod" value="Efectivo Divisas" checked class="text-black focus:ring-black">
+              <span class="font-bold text-black">Efectivo ($ USD)</span>
+            </label>
+            <label class="flex items-center gap-2 p-2.5 border border-neutral-200 rounded-xl cursor-pointer bg-neutral-50">
+              <input type="radio" name="paymethod" value="Pago Móvil BCV" class="text-black focus:ring-black">
+              <span class="font-bold text-black">Pago Móvil (BCV)</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- RESUMEN DE PAGO -->
+        <div class="p-3 bg-neutral-50 rounded-2xl border border-neutral-100 text-xs space-y-1.5 mt-3">
+          <div class="flex justify-between text-neutral-600">
+            <span>Total en Dólares:</span>
+            <span class="font-black text-black text-sm" id="display-total-usd">$42.00</span>
+          </div>
+          <div class="flex justify-between text-neutral-500 text-[11px]">
+            <span>Tasa Oficial BCV:</span>
+            <span class="font-medium" id="display-bcv-rate">Bs ~911.62 / USD</span>
+          </div>
+          <div class="flex justify-between font-black text-black pt-1.5 border-t border-neutral-200">
+            <span>Total en Bolívares:</span>
+            <span id="display-total-bs" class="text-amber-600">Bs ~38,288.04</span>
+          </div>
+        </div>
+
+        <!-- BOTÓN FINAL DE CONFIRMACIÓN -->
+        <button type="submit" id="submit-btn" class="glass-btn-yellow w-full font-black text-sm py-4 px-6 rounded-2xl mt-4 transition-all flex items-center justify-center gap-2 shadow-md">
+          <span>CONFIRMAR Y PAGAR AL RECIBIR</span>
+          <span class="text-base">👉</span>
+        </button>
+
+        <p class="text-[10px] text-center text-neutral-400 mt-2 font-medium">
+          🔒 Despacho asegurado · No pagas nada por adelantado.
+        </p>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <!-- SCRIPT INTERACTIVO: MODAL POP-UP, CARRUSEL Y SELECCIÓN DE OFERTAS -->
+  <script>
+    const BCV_RATE = 911.62;
+    let currentOffer = 'duo';
+    let currentPrice = 42.00;
+
+    // Galería oficial con las 4 fotos reales
+    const carouselImages = [
+      'images/hero_jar.jpg',
+      'images/manos_abriendo_pote.jpg',
+      'images/antes_despues_textura.jpg',
+      'images/caja_dimensiones.jpg'
+    ];
+    let currentSlide = 0;
+
+    function updateCarousel() {
+      const imgEl = document.getElementById('main-product-img');
+      imgEl.src = carouselImages[currentSlide];
+      document.getElementById('slide-indicator').innerText = (currentSlide + 1) + ' / ' + carouselImages.length;
+      
+      const thumbs = document.querySelectorAll('.thumb-img');
+      thumbs.forEach((thumb, idx) => {
+        if (idx === currentSlide) {
+          thumb.classList.remove('opacity-50', 'border-neutral-200');
+          thumb.classList.add('border-black', 'border-2', 'opacity-100');
+        } else {
+          thumb.classList.add('opacity-50', 'border-neutral-200');
+          thumb.classList.remove('border-black', 'border-2', 'opacity-100');
+        }
+      });
+    }
+
+    function setSlide(idx) {
+      currentSlide = idx;
+      updateCarousel();
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % carouselImages.length;
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + carouselImages.length) % carouselImages.length;
+      updateCarousel();
+    }
+
+    // Touch Swipe Support
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const touchArea = document.getElementById('carousel-touch-area');
+    
+    touchArea.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, false);
+
+    touchArea.addEventListener('touchend', e => {
+      touchEndX = e.changedTouches[0].screenX;
+      if (touchStartX - touchEndX > 40) nextSlide();
+      if (touchEndX - touchStartX > 40) prevSlide();
+    }, false);
+
+    // Control del Modal Pop-up
+    function openModal() {
+      const modal = document.getElementById('checkout-modal');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('checkout-modal');
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Cerrar al hacer clic fuera del modal
+    document.getElementById('checkout-modal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+
+    // Selección de Ofertas con bordes de alto contraste
+    function selectOffer(type, price) {
+      currentOffer = type;
+      currentPrice = price;
+
+      const cardDuo = document.getElementById('card-offer-duo');
+      const cardSingle = document.getElementById('card-offer-single');
+      const radioDuo = document.getElementById('modal-radio-duo');
+      const radioSingle = document.getElementById('modal-radio-single');
+
+      if (type === 'duo') {
+        radioDuo.checked = true;
+        radioSingle.checked = false;
+
+        // Activar Duo: Borde negro grueso y fondo ámbar
+        cardDuo.className = "cursor-pointer p-3.5 rounded-2xl border-2 border-black bg-amber-50/40 shadow-sm transition-all flex items-center justify-between relative ring-2 ring-black/5 opacity-100";
+        
+        // Desactivar Single: Borde neutral suave
+        cardSingle.className = "cursor-pointer p-3.5 rounded-2xl border border-neutral-200 bg-white opacity-70 hover:opacity-100 transition-all flex items-center justify-between";
+        
+        document.getElementById('sticky-offer-name').innerText = 'COMBO DÚO (2x)';
+      } else {
+        radioSingle.checked = true;
+        radioDuo.checked = false;
+
+        // Activar Single: Borde negro grueso y fondo ámbar
+        cardSingle.className = "cursor-pointer p-3.5 rounded-2xl border-2 border-black bg-amber-50/40 shadow-sm transition-all flex items-center justify-between relative ring-2 ring-black/5 opacity-100";
+        
+        // Desactivar Duo: Borde neutral suave
+        cardDuo.className = "cursor-pointer p-3.5 rounded-2xl border border-neutral-200 bg-white opacity-70 hover:opacity-100 transition-all flex items-center justify-between";
+        
+        document.getElementById('sticky-offer-name').innerText = '1 POTE INDIVIDUAL';
+      }
+
+      // Actualizar precios en pantalla
+      document.getElementById('display-total-usd').innerText = '$' + price.toFixed(2);
+      document.getElementById('sticky-price-usd').innerText = '$' + price.toFixed(2);
+      
+      const totalBs = (price * BCV_RATE).toLocaleString('es-VE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById('display-total-bs').innerText = 'Bs ~' + totalBs;
+    }
+
+    // Directorio Oficial Maestro de 134 Sucursales Tealca
+    const TEALCA_BRANCHES = {"Anzoátegui": [{"code": "2912", "name": "Anaco", "city": "Anaco", "label": "2912 - Anaco"}, {"code": "2907", "name": "Barcelona", "city": "Barcelona", "label": "2907 - Barcelona"}, {"code": "2901", "name": "El Tigre", "city": "El Tigre", "label": "2901 - El Tigre"}, {"code": "2906", "name": "Lechería", "city": "Lechería", "label": "2906 - Lechería"}, {"code": "2909", "name": "Puerto La Cruz", "city": "Puerto La Cruz", "label": "2909 - Puerto La Cruz"}, {"code": "2913", "name": "Puerto La Cruz Oeste", "city": "Puerto La Cruz", "label": "2913 - Puerto La Cruz Oeste"}], "Apure": [{"code": "5601", "name": "Guasdualito", "city": "", "label": "5601 - Guasdualito"}, {"code": "5602", "name": "San Fernando De Apure", "city": "", "label": "5602 - San Fernando De Apure"}], "Aragua": [{"code": "5119B", "name": "El Limon", "city": "", "label": "5119B - El Limon"}, {"code": "5115", "name": "Cagua", "city": "Cagua", "label": "5115 - Cagua"}, {"code": "5118", "name": "La Victoria", "city": "La Victoria", "label": "5118 - La Victoria"}, {"code": "5122", "name": "Las Delicias", "city": "Maracay", "label": "5122 - Las Delicias (Maracay)"}, {"code": "5113", "name": "Maracay Este (av. Sucre)", "city": "Maracay", "label": "5113 - Maracay Este (av. Sucre)"}, {"code": "5119", "name": "Maracay Oeste", "city": "Maracay", "label": "5119 - Maracay Oeste"}, {"code": "CC", "name": "Oficina Comercial Maracay", "city": "Maracay", "label": "CC - Oficina Comercial Maracay"}, {"code": "5113B", "name": "Tealca Maracay Sector Santa Ana", "city": "Maracay", "label": "5113B - Tealca Maracay Sector Santa Ana"}, {"code": "5117", "name": "La Morita", "city": "Turmero", "label": "5117 - La Morita (Turmero)"}, {"code": "5120", "name": "Turmero", "city": "Turmero", "label": "5120 - Turmero"}], "Barinas": [{"code": "8006", "name": "Alto Barinas", "city": "", "label": "8006 - Alto Barinas"}, {"code": "8006C", "name": "Barinas Calle Cedeno", "city": "", "label": "8006C - Barinas Calle Cedeno"}, {"code": "8006B", "name": "Barinas Centro Comercial Barinas", "city": "", "label": "8006B - Barinas Centro Comercial Barinas"}, {"code": "8008", "name": "Santa Barbara De Barinas", "city": "", "label": "8008 - Santa Barbara De Barinas"}, {"code": "8007", "name": "Barinitas", "city": "Barinitas", "label": "8007 - Barinitas"}], "Bolívar": [{"code": "3211", "name": "Santa Elena De Uairen", "city": "", "label": "3211 - Santa Elena De Uairen"}, {"code": "3104", "name": "Tumeremo", "city": "", "label": "3104 - Tumeremo"}, {"code": "3210", "name": "Ciudad Bolivar", "city": "Ciudad Bolívar", "label": "3210 - Ciudad Bolivar (Ciudad Bolívar)"}, {"code": "3205B", "name": "Puerto Ordaz Alta Vista", "city": "Puerto Ordaz", "label": "3205B - Puerto Ordaz Alta Vista"}, {"code": "3205", "name": "Puerto Ordaz Castillito", "city": "Puerto Ordaz", "label": "3205 - Puerto Ordaz Castillito"}, {"code": "3209", "name": "Ventuari", "city": "Puerto Ordaz", "label": "3209 - Ventuari (Puerto Ordaz)"}, {"code": "3208", "name": "San Félix (el Roble)", "city": "San Félix", "label": "3208 - San Félix (el Roble)"}, {"code": "3207", "name": "Unare", "city": "Unare", "label": "3207 - Unare"}, {"code": "3208B", "name": "Upata", "city": "Upata", "label": "3208B - Upata"}], "Carabobo": [{"code": "5214", "name": "Guacara", "city": "Guacara", "label": "5214 - Guacara"}, {"code": "5209", "name": "Naguanagua", "city": "Valencia", "label": "5209 - Naguanagua (Valencia)"}, {"code": "DD", "name": "Oficina Comercial Valencia", "city": "Valencia", "label": "DD - Oficina Comercial Valencia"}, {"code": "5210", "name": "San Diego", "city": "Valencia", "label": "5210 - San Diego (Valencia)"}, {"code": "5211", "name": "Tocuyito", "city": "Valencia", "label": "5211 - Tocuyito (Valencia)"}, {"code": "5201", "name": "Valencia (av. Andrés Eloy Blanco)", "city": "Valencia", "label": "5201 - Valencia (av. Andrés Eloy Blanco)"}, {"code": "5207", "name": "Valencia (distribuidor San Blas)", "city": "Valencia", "label": "5207 - Valencia (distribuidor San Blas)"}, {"code": "5207B", "name": "Valencia (plaza La Candelaria)", "city": "Valencia", "label": "5207B - Valencia (plaza La Candelaria)"}, {"code": "5208", "name": "Valencia (zona Industrial Norte)", "city": "Valencia", "label": "5208 - Valencia (zona Industrial Norte)"}, {"code": "5206", "name": "Valencia Sur (paseo Las Industrias)", "city": "Valencia", "label": "5206 - Valencia Sur (paseo Las Industrias)"}], "Cojedes": [{"code": "5402", "name": "San Carlos", "city": "San Carlos", "label": "5402 - San Carlos"}, {"code": "5403", "name": "Tinaquillo", "city": "Tinaquillo", "label": "5403 - Tinaquillo"}], "Caracas / Distrito Capital": [{"code": "1114", "name": "Boleíta", "city": "", "label": "1114 - Boleíta"}, {"code": "1143", "name": "Capitolio", "city": "", "label": "1143 - Capitolio"}, {"code": "1125", "name": "Catia", "city": "", "label": "1125 - Catia"}, {"code": "1137B", "name": "Ccct", "city": "", "label": "1137B - Ccct"}, {"code": "1142", "name": "El Cafetal", "city": "", "label": "1142 - El Cafetal"}, {"code": "1128B", "name": "El Cementerio", "city": "", "label": "1128B - El Cementerio"}, {"code": "1126", "name": "El Paraíso", "city": "", "label": "1126 - El Paraíso"}, {"code": "1137", "name": "El Rosal – Chacao", "city": "", "label": "1137 - El Rosal – Chacao"}, {"code": "1132", "name": "Filas De Mariches", "city": "", "label": "1132 - Filas De Mariches"}, {"code": "1114C", "name": "La California", "city": "", "label": "1114C - La California"}, {"code": "1128", "name": "La Candelaria", "city": "", "label": "1128 - La Candelaria"}, {"code": "1128C", "name": "La Candelaria C.c. Lord Center", "city": "", "label": "1128C - La Candelaria C.c. Lord Center"}, {"code": "1110", "name": "La Trinidad", "city": "", "label": "1110 - La Trinidad"}, {"code": "1131", "name": "Los Caobos", "city": "", "label": "1131 - Los Caobos"}, {"code": "AA", "name": "Los Chaguaramos", "city": "", "label": "AA - Los Chaguaramos"}, {"code": "1127", "name": "Los Palos Grandes", "city": "", "label": "1127 - Los Palos Grandes"}, {"code": "1114B", "name": "Montecristo", "city": "", "label": "1114B - Montecristo"}, {"code": "1133", "name": "Prados Del Este", "city": "", "label": "1133 - Prados Del Este"}, {"code": "EXPNN", "name": "Quinta Crespo Internacional", "city": "", "label": "EXPNN - Quinta Crespo Internacional"}, {"code": "1102", "name": "Sabana Grande", "city": "", "label": "1102 - Sabana Grande"}, {"code": "1119", "name": "San Martin", "city": "", "label": "1119 - San Martin"}, {"code": "1102B", "name": "Urbina", "city": "", "label": "1102B - Urbina"}, {"code": "1141", "name": "Junquito", "city": "El Junquito", "label": "1141 - Junquito (El Junquito)"}], "Delta Amacuro": [{"code": "3300", "name": "Tucupita", "city": "Tucupita", "label": "3300 - Tucupita"}], "Falcón": [{"code": "7609", "name": "Dabajuro", "city": "", "label": "7609 - Dabajuro"}, {"code": "7607", "name": "Coro", "city": "Coro", "label": "7607 - Coro"}, {"code": "7608", "name": "Punto Fijo Las Virtudes Ciudad Comercial", "city": "Punta Cardon", "label": "7608 - Punto Fijo Las Virtudes Ciudad Comercial (Punta Cardon)"}, {"code": "7607B", "name": "Punto Fijo Centro", "city": "Punto Fijo", "label": "7607B - Punto Fijo Centro"}], "Guárico": [{"code": "J5121", "name": "San Juan De Los Morros – Villa De Cura", "city": "", "label": "J5121 - San Juan De Los Morros – Villa De Cura"}, {"code": "5501", "name": "Calabozo", "city": "Calabozo", "label": "5501 - Calabozo"}, {"code": "5303", "name": "Valle De La Pascua", "city": "Valle de La Pascua", "label": "5303 - Valle De La Pascua"}], "Lara": [{"code": "7918C", "name": "Barquisimeto Carrera 19", "city": "Barquisimeto", "label": "7918C - Barquisimeto Carrera 19"}, {"code": "7910", "name": "Barquisimeto Este", "city": "Barquisimeto", "label": "7910 - Barquisimeto Este"}, {"code": "7918", "name": "Barquisimeto Oeste", "city": "Barquisimeto", "label": "7918 - Barquisimeto Oeste"}, {"code": "7918B", "name": "Barquisimeto Oeste Av. Las Industrias", "city": "Barquisimeto", "label": "7918B - Barquisimeto Oeste Av. Las Industrias"}, {"code": "7912", "name": "Barquisimeto Sur", "city": "Barquisimeto", "label": "7912 - Barquisimeto Sur"}, {"code": "GG", "name": "Oficina Comercial Barquisimeto", "city": "Barquisimeto", "label": "GG - Oficina Comercial Barquisimeto"}, {"code": "7915", "name": "Cabudare", "city": "Cabudare", "label": "7915 - Cabudare"}, {"code": "7916", "name": "Carora", "city": "Carora", "label": "7916 - Carora"}], "Miranda": [{"code": "1406", "name": "Carrizal", "city": "", "label": "1406 - Carrizal"}, {"code": "1501", "name": "Charallave", "city": "Charallave", "label": "1501 - Charallave"}, {"code": "1305", "name": "Guarenas", "city": "Guarenas", "label": "1305 - Guarenas"}, {"code": "1302", "name": "Guatire", "city": "Guatire", "label": "1302 - Guatire"}, {"code": "1503", "name": "Higuerote", "city": "Higuerote", "label": "1503 - Higuerote"}, {"code": "1405B", "name": "Los Teques", "city": "Los Teques", "label": "1405B - Los Teques"}, {"code": "1405", "name": "San Antonio De Los Altos", "city": "San Antonio de los A", "label": "1405 - San Antonio De Los Altos"}], "Monagas": [{"code": "3005", "name": "Maturín Este (c.c. Juanico)", "city": "Maturín", "label": "3005 - Maturín Este (c.c. Juanico)"}, {"code": "RR", "name": "Oficina Comercial Maturín", "city": "Maturín", "label": "RR - Oficina Comercial Maturín"}, {"code": "3007", "name": "Tipuro", "city": "Maturín", "label": "3007 - Tipuro (Maturín)"}], "Mérida": [{"code": "8301B", "name": "Merida", "city": "", "label": "8301B - Merida"}, {"code": "8308", "name": "Merida Norte", "city": "", "label": "8308 - Merida Norte"}, {"code": "8204C", "name": "Caja Seca", "city": "Caja Seca", "label": "8204C - Caja Seca"}, {"code": "8307", "name": "El Vigía", "city": "El Vigía", "label": "8307 - El Vigía"}], "Nueva Esparta": [{"code": "2706C", "name": "Cocheima", "city": "La Asuncion", "label": "2706C - Cocheima (La Asuncion)"}, {"code": "2706", "name": "Porlamar", "city": "Los Robles", "label": "2706 - Porlamar (Los Robles)"}], "Portuguesa": [{"code": "5401B", "name": "Acarigua", "city": "Acarigua", "label": "5401B - Acarigua"}, {"code": "5401C", "name": "Acarigua Ii Mamanico", "city": "Acarigua", "label": "5401C - Acarigua Ii Mamanico"}, {"code": "7705", "name": "Guanare", "city": "Guanare", "label": "7705 - Guanare"}], "Sucre": [{"code": "2803", "name": "Carupano", "city": "Carupano", "label": "2803 - Carupano"}, {"code": "2804", "name": "Cumana Santa Rosa", "city": "Cumana", "label": "2804 - Cumana Santa Rosa"}, {"code": "2802", "name": "Cumaná", "city": "Cumana", "label": "2802 - Cumaná (Cumana)"}], "Trujillo": [{"code": "8204", "name": "Valera", "city": "Valera", "label": "8204 - Valera"}, {"code": "8204B", "name": "Valera-Centro", "city": "Valera", "label": "8204B - Valera-Centro"}], "Táchira": [{"code": "8517", "name": "Rubio", "city": "", "label": "8517 - Rubio"}, {"code": "8115C", "name": "Capacho", "city": "Capacho", "label": "8115C - Capacho"}, {"code": "8113", "name": "La Fria", "city": "La fria", "label": "8113 - La Fria"}, {"code": "8112B", "name": "San Antonio Del Tachira", "city": "San Antonio del Tach", "label": "8112B - San Antonio Del Tachira"}, {"code": "8112", "name": "Paramillo", "city": "San Cristobal", "label": "8112 - Paramillo (San Cristobal)"}, {"code": "8115", "name": "San Cristobal", "city": "San Cristobal", "label": "8115 - San Cristobal"}, {"code": "8111", "name": "San Cristóbal (barrio Obrero)", "city": "San Cristobal", "label": "8111 - San Cristóbal (barrio Obrero) (San Cristobal)"}, {"code": "8114", "name": "San Cristóbal Sur", "city": "San Cristobal", "label": "8114 - San Cristóbal Sur (San Cristobal)"}, {"code": "8115B", "name": "Tariba", "city": "Tariba", "label": "8115B - Tariba"}, {"code": "8107", "name": "Ureña", "city": "Ureña", "label": "8107 - Ureña"}], "La Guaira": [{"code": "1234", "name": "Maiquetia", "city": "Maiquetia", "label": "1234 - Maiquetia"}], "Yaracuy": [{"code": "7802", "name": "San Felipe", "city": "San Felipe", "label": "7802 - San Felipe"}], "Zulia": [{"code": "8307B", "name": "Santa Barbara Del Zulia", "city": "", "label": "8307B - Santa Barbara Del Zulia"}, {"code": "8405", "name": "Cabimas", "city": "Cabimas", "label": "8405 - Cabimas"}, {"code": "8406", "name": "Ciudad Ojeda", "city": "Ciudad Ojeda", "label": "8406 - Ciudad Ojeda"}, {"code": "8502", "name": "Bella Vista 5 De Julio", "city": "Maracaibo", "label": "8502 - Bella Vista 5 De Julio (Maracaibo)"}, {"code": "8502B", "name": "Delicias 5 De Julio", "city": "Maracaibo", "label": "8502B - Delicias 5 De Julio (Maracaibo)"}, {"code": "8511", "name": "Dr. Portillo", "city": "Maracaibo", "label": "8511 - Dr. Portillo (Maracaibo)"}, {"code": "8511B", "name": "Maracaibo Centro Cc Gran Bazar", "city": "Maracaibo", "label": "8511B - Maracaibo Centro Cc Gran Bazar"}, {"code": "8513B", "name": "Maracaibo Circunvalacion 2 Sur Oeste", "city": "Maracaibo", "label": "8513B - Maracaibo Circunvalacion 2 Sur Oeste"}, {"code": "8513C", "name": "Maracaibo Delicias Norte Centro Comercial El Pilar", "city": "Maracaibo", "label": "8513C - Maracaibo Delicias Norte Centro Comercial El Pilar"}, {"code": "8514", "name": "Maracaibo Norte", "city": "Maracaibo", "label": "8514 - Maracaibo Norte"}, {"code": "8513", "name": "Maracaibo Oeste – La Limpia", "city": "Maracaibo", "label": "8513 - Maracaibo Oeste – La Limpia"}, {"code": "8509B", "name": "Maracaibo Sur (la Coromoto)", "city": "Maracaibo", "label": "8509B - Maracaibo Sur (la Coromoto)"}, {"code": "8509", "name": "Maracaibo Sur (san Francisco)", "city": "Maracaibo", "label": "8509 - Maracaibo Sur (san Francisco)"}, {"code": "BB", "name": "Oficina Comercial Maracaibo – Cecilio Acosta", "city": "Maracaibo", "label": "BB - Oficina Comercial Maracaibo – Cecilio Acosta"}, {"code": "8516", "name": "Villa Del Rosario", "city": "Villa del Rosario", "label": "8516 - Villa Del Rosario"}]};
+
+    function populateTealcaBranches(selectedState) {
+      const tealcaSelect = document.getElementById('cust-tealca');
+      tealcaSelect.innerHTML = '';
+
+      const defaultOpt = document.createElement('option');
+      defaultOpt.value = '';
+      defaultOpt.textContent = '(Opcional) Selecciona tu sucursal Tealca';
+      tealcaSelect.appendChild(defaultOpt);
+
+      const homeOpt = document.createElement('option');
+      homeOpt.value = 'Entrega a Domicilio';
+      homeOpt.textContent = '🏠 Prefiero entrega en mi dirección exacta (Sin taquilla)';
+      tealcaSelect.appendChild(homeOpt);
+
+      if (!selectedState) return;
+
+      const offices = TEALCA_BRANCHES[selectedState] || [];
+      if (offices.length > 0) {
+        const group = document.createElement('optgroup');
+        group.label = 'Sedes en ' + selectedState + ' (' + offices.length + ' disponibles)';
+        offices.forEach(item => {
+          const opt = document.createElement('option');
+          opt.value = item.label;
+          opt.textContent = item.label;
+          group.appendChild(opt);
+        });
+        tealcaSelect.appendChild(group);
+      } else {
+        const opt = document.createElement('option');
+        opt.value = '';
+        opt.textContent = '⚠️ Sin oficina física directa (Despacho a tu dirección)';
+        tealcaSelect.appendChild(opt);
+      }
+    }
+
+    document.getElementById('cust-state').addEventListener('change', function() {
+      populateTealcaBranches(this.value);
+    });
+
+    // Envío del Formulario a Manuel
+    function handleOrderSubmit(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('cust-name').value.trim();
+      const phone = document.getElementById('cust-phone').value.trim();
+      const state = document.getElementById('cust-state').value;
+      const city = document.getElementById('cust-city').value.trim();
+      const address = document.getElementById('cust-address').value.trim();
+      const tealcaAgency = document.getElementById('cust-tealca').value.trim();
+      const paymethod = document.querySelector('input[name="paymethod"]:checked').value;
+      
+      const offerTitle = (currentOffer === 'duo') ? 'Combo Dúo (2 Potes - 200g)' : '1 Pote Individual (100g)';
+      const totalBs = (currentPrice * BCV_RATE).toLocaleString('es-VE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+      let waMessage = `¡Hola Manuel! 👋 Acabo de solicitar mi pedido en la página:\n\n` +
+        `📦 *Producto:* Crema Facial Snail 92™ (Fórmula Bio-Activa Helix)\n` +
+        `✨ *Promoción:* ${offerTitle}\n` +
+        `💵 *Monto:* $${currentPrice.toFixed(2)} USD (Bs ~${totalBs})\n` +
+        `💳 *Método de Pago al Recibir:* ${paymethod}\n\n` +
+        `👤 *Cliente:* ${name}\n` +
+        `📱 *Teléfono:* ${phone}\n` +
+        `📍 *Ubicación:* ${city}, ${state}\n` +
+        `🏠 *Dirección de Entrega:* ${address}\n`;
+
+      if (tealcaAgency && tealcaAgency !== 'Entrega a Domicilio') {
+        waMessage += `🏢 *Retiro en Agencia Tealca:* ${tealcaAgency}\n`;
+      } else {
+        waMessage += `🚚 *Modalidad:* Entrega a domicilio en dirección suministrada\n`;
+      }
+
+      waMessage += `\nQuedo a la espera de la nota de confirmación para el despacho. ¡Gracias!`;
+
+      const encodedMsg = encodeURIComponent(waMessage);
+      
+      const submitBtn = document.getElementById('submit-btn');
+      submitBtn.innerHTML = '<span>PROCESANDO... ⏳</span>';
+      submitBtn.disabled = true;
+
+      setTimeout(() => {
+        window.location.href = `https://api.whatsapp.com/send?text=${encodedMsg}`;
+      }, 600);
+    }
+  </script>
+
+</body>
+</html>

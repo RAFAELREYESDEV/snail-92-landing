@@ -1,0 +1,12 @@
+# OS Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Temporary & Working Files
+tealca_prompt.txt
+*.log
+.env.local
+.vscode/
