@@ -6,6 +6,24 @@
   <title>SNAIL 92™ | El Secreto Coreano para una Piel de Porcelana sin Grasa</title>
   <meta name="description" content="Tratamiento coreano en gel concentrado al 92% de filtrado bio-activo Helix. Alisa textura, minimiza poros y repara tu barrera cutánea sin sensación grasosa. Paga al recibir en toda Venezuela.">
   
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2185656652308835');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2185656652308835&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts: Inter (Tipografía Apple Standard) -->
@@ -800,12 +818,23 @@
 
       const encodedMsg = encodeURIComponent(waMessage);
       
+      // Disparo de Evento de Conversión a Meta Pixel
+      if (typeof fbq === 'function') {
+        fbq('track', 'Purchase', {
+          value: currentPrice,
+          currency: 'USD',
+          content_name: offerTitle,
+          content_type: 'product'
+        });
+      }
+
       const submitBtn = document.getElementById('submit-btn');
       submitBtn.innerHTML = '<span>PROCESANDO... ⏳</span>';
       submitBtn.disabled = true;
 
+      const WHATSAPP_NUMBER = "584241319307";
       setTimeout(() => {
-        window.location.href = `https://api.whatsapp.com/send?text=${encodedMsg}`;
+        window.location.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMsg}`;
       }, 600);
     }
   </script>
