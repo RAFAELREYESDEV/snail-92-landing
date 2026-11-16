@@ -363,6 +363,28 @@
 
     </div>
 
+    <!-- SPOTLIGHT: EL PROTOCOLO DÚO (UPSELL ACOMPAÑANTE) -->
+    <div class="mt-4 p-4 rounded-3xl bg-amber-50/80 border border-amber-200 text-left relative overflow-hidden">
+      <span class="text-[9px] font-black uppercase tracking-wider bg-amber-500 text-white px-2.5 py-0.5 rounded-full inline-block mb-2">
+        ✨ EL PROTOCOLO DE 2 PASOS MÁS VIRAL
+      </span>
+      <div class="flex items-center gap-3">
+        <div class="w-18 h-18 rounded-2xl overflow-hidden bg-white border border-amber-200 flex-shrink-0 shadow-xs">
+          <img src="images/serum_caja_frasco.jpg" alt="Sérum Tensor Colágeno" class="w-full h-full object-cover">
+        </div>
+        <div class="flex-1 min-w-0">
+          <h4 class="text-xs font-black text-black leading-tight">Potencia con el Sérum Tensor de Colágeno</h4>
+          <p class="text-neutral-600 text-[11px] leading-snug mt-1">
+            <strong>Paso 1:</strong> 3 gotas de Sérum West&Month para tensar líneas de expresión.<br>
+            <strong>Paso 2:</strong> Crema Snail 92™ para sellar hidratación y aportar efecto porcelana.
+          </p>
+          <span class="text-[10px] font-bold text-amber-800 block mt-1.5">
+            👉 Puedes agregarlo a tu pedido con descuento exclusivo al confirmar abajo.
+          </span>
+        </div>
+      </div>
+    </div>
+
     <!-- BOTÓN DEBAJO DE BENEFICIOS CLAVE (COMO PIDIÓ EL USUARIO) -->
     <div class="mt-6 text-center">
       <button onclick="openModal()" class="glass-btn-yellow w-full font-black text-sm py-4 px-6 rounded-2xl flex items-center justify-center gap-2 shadow-md">
@@ -500,6 +522,41 @@
         </div>
       </div>
 
+      <!-- ORDER BUMP: UPSELL SÉRUM DE COLÁGENO WEST&MONTH -->
+      <div id="upsell-container" onclick="toggleUpsellFromContainer(event)" class="cursor-pointer mb-4 p-3.5 rounded-2xl border-2 border-dashed border-amber-300 bg-amber-50/50 hover:bg-amber-50 transition-all relative">
+        <div class="flex items-start gap-3">
+          <!-- Checkbox estilizado -->
+          <div class="pt-1 flex-shrink-0">
+            <input type="checkbox" id="upsell-checkbox" onchange="toggleUpsell(this.checked)" class="w-5 h-5 text-amber-600 rounded border-neutral-300 focus:ring-amber-500 cursor-pointer">
+          </div>
+          
+          <!-- Miniatura del Producto -->
+          <div class="w-16 h-16 rounded-xl overflow-hidden bg-white border border-neutral-200 flex-shrink-0 shadow-xs relative">
+            <img src="images/serum_mano_frasco.jpg" alt="Sérum Colágeno West&Month" class="w-full h-full object-cover">
+          </div>
+
+          <!-- Información y Gancho -->
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="text-[9px] font-black uppercase tracking-wider bg-amber-500 text-white px-2 py-0.5 rounded-full">
+                ⚡ OFERTA EXCLUSIVA DE 1 CLIC
+              </span>
+            </div>
+            <strong class="font-black text-black text-xs block leading-tight mt-1">
+              Sérum Tensor de Colágeno Puro (30ml)
+            </strong>
+            <p class="text-[10px] text-neutral-600 leading-snug mt-0.5">
+              Aplica 3 gotas antes de tu crema para tensar líneas de expresión y multiplicar la firmeza.
+            </p>
+            <div class="flex items-center gap-2 mt-1">
+              <span class="text-xs font-black text-amber-700" id="display-upsell-badge">+$10.00 USD</span>
+              <span class="text-[10px] text-neutral-400 line-through">$20.00</span>
+              <span class="text-[10px] font-bold text-emerald-600">Ahorras 50%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- PASO 2: DATOS DEL CLIENTE Y ENVÍO -->
       <form id="modal-order-form" onsubmit="handleOrderSubmit(event)" class="space-y-3">
         
@@ -588,7 +645,15 @@
         <!-- RESUMEN DE PAGO -->
         <div class="p-3 bg-neutral-50 rounded-2xl border border-neutral-100 text-xs space-y-1.5 mt-3">
           <div class="flex justify-between text-neutral-600">
-            <span>Total en Dólares:</span>
+            <span>Tratamiento Seleccionado:</span>
+            <span class="font-bold text-neutral-800" id="display-base-price">$42.00</span>
+          </div>
+          <div id="display-upsell-row" class="hidden flex justify-between text-amber-800 text-[11px] font-bold bg-amber-100/70 px-2 py-1 rounded-lg">
+            <span>+ Sérum Colágeno Tensor (30ml):</span>
+            <span id="display-upsell-amount">+$10.00 USD</span>
+          </div>
+          <div class="flex justify-between text-neutral-600 pt-1 border-t border-neutral-200">
+            <span class="font-bold">Total a Pagar en Dólares:</span>
             <span class="font-black text-black text-sm" id="display-total-usd">$42.00</span>
           </div>
           <div class="flex justify-between text-neutral-500 text-[11px]">
@@ -596,7 +661,7 @@
             <span class="font-medium" id="display-bcv-rate">Bs ~911.62 / USD</span>
           </div>
           <div class="flex justify-between font-black text-black pt-1.5 border-t border-neutral-200">
-            <span>Total en Bolívares:</span>
+            <span>Total a Pagar en Bolívares:</span>
             <span id="display-total-bs" class="text-amber-600">Bs ~38,288.04</span>
           </div>
         </div>
@@ -622,6 +687,47 @@
     const BCV_RATE = 911.62;
     let currentOffer = 'duo';
     let currentPrice = 42.00;
+    let isUpsellSelected = false;
+    let UPSELL_PRICE = 10.00; // Ajustable posteriormente
+
+    // Control de Upsell / Order Bump
+    function toggleUpsell(checked) {
+      isUpsellSelected = checked;
+      const container = document.getElementById('upsell-container');
+      const upsellRow = document.getElementById('display-upsell-row');
+      
+      if (isUpsellSelected) {
+        container.className = "cursor-pointer mb-4 p-3.5 rounded-2xl border-2 border-amber-500 bg-amber-50 shadow-sm ring-2 ring-amber-400/20 transition-all relative";
+        if (upsellRow) upsellRow.classList.remove('hidden');
+      } else {
+        container.className = "cursor-pointer mb-4 p-3.5 rounded-2xl border-2 border-dashed border-amber-300 bg-amber-50/50 hover:bg-amber-50 transition-all relative";
+        if (upsellRow) upsellRow.classList.add('hidden');
+      }
+      
+      updatePriceDisplays();
+    }
+
+    function toggleUpsellFromContainer(e) {
+      if (e.target.id !== 'upsell-checkbox') {
+        const cb = document.getElementById('upsell-checkbox');
+        cb.checked = !cb.checked;
+        toggleUpsell(cb.checked);
+      }
+    }
+
+    function updatePriceDisplays() {
+      const basePrice = currentPrice;
+      const totalUSD = basePrice + (isUpsellSelected ? UPSELL_PRICE : 0);
+      
+      const baseEl = document.getElementById('display-base-price');
+      if (baseEl) baseEl.innerText = '$' + basePrice.toFixed(2);
+      
+      document.getElementById('display-total-usd').innerText = '$' + totalUSD.toFixed(2);
+      document.getElementById('sticky-price-usd').innerText = '$' + totalUSD.toFixed(2);
+      
+      const totalBs = (totalUSD * BCV_RATE).toLocaleString('es-VE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById('display-total-bs').innerText = 'Bs ~' + totalBs;
+    }
 
     // Galería oficial con las 4 fotos reales
     const carouselImages = [
@@ -734,11 +840,7 @@
       }
 
       // Actualizar precios en pantalla
-      document.getElementById('display-total-usd').innerText = '$' + price.toFixed(2);
-      document.getElementById('sticky-price-usd').innerText = '$' + price.toFixed(2);
-      
-      const totalBs = (price * BCV_RATE).toLocaleString('es-VE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-      document.getElementById('display-total-bs').innerText = 'Bs ~' + totalBs;
+      updatePriceDisplays();
     }
 
     // Directorio Oficial Maestro de 134 Sucursales Tealca
@@ -796,12 +898,18 @@
       const paymethod = document.querySelector('input[name="paymethod"]:checked').value;
       
       const offerTitle = (currentOffer === 'duo') ? 'Combo Dúo (2 Potes - 200g)' : '1 Pote Individual (100g)';
-      const totalBs = (currentPrice * BCV_RATE).toLocaleString('es-VE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      const totalFinalUSD = currentPrice + (isUpsellSelected ? UPSELL_PRICE : 0);
+      const totalBs = (totalFinalUSD * BCV_RATE).toLocaleString('es-VE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
       let waMessage = `¡Hola Manuel! 👋 Acabo de solicitar mi pedido en la página:\n\n` +
         `📦 *Producto:* Crema Facial Snail 92™ (Fórmula Bio-Activa Helix)\n` +
-        `✨ *Promoción:* ${offerTitle}\n` +
-        `💵 *Monto:* $${currentPrice.toFixed(2)} USD (Bs ~${totalBs})\n` +
+        `✨ *Promoción:* ${offerTitle}\n`;
+        
+      if (isUpsellSelected) {
+        waMessage += `💎 *Potenciador Agregado:* Sérum Tensor de Colágeno West&Month 30ml (+$${UPSELL_PRICE.toFixed(2)} USD)\n`;
+      }
+      
+      waMessage += `💵 *Total a Pagar:* $${totalFinalUSD.toFixed(2)} USD (Bs ~${totalBs})\n` +
         `💳 *Método de Pago al Recibir:* ${paymethod}\n\n` +
         `👤 *Cliente:* ${name}\n` +
         `📱 *Teléfono:* ${phone}\n` +
@@ -821,9 +929,9 @@
       // Disparo de Evento de Conversión a Meta Pixel
       if (typeof fbq === 'function') {
         fbq('track', 'Purchase', {
-          value: currentPrice,
+          value: totalFinalUSD,
           currency: 'USD',
-          content_name: offerTitle,
+          content_name: offerTitle + (isUpsellSelected ? ' + Sérum Colágeno' : ''),
           content_type: 'product'
         });
       }
